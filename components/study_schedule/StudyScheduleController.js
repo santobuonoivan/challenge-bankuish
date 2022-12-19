@@ -1,12 +1,12 @@
-const courseService = require('./CourseServices');
-const courseRepository = require('./CourseRepository');
+const courseService = require('./StudyScheduleServices');
+const courseRepository = require('./StudyScheduleRepository');
 
 exports.createStudySchedule = async function(req,res,next){
-    const {courses} = req.body;
+    const {courses,userId} = req.body;
     try {
         let sortCourses = courseService.sortCourses(courses);
         if(sortCourses.length > 0){
-            let result = await courseRepository.create(sortCourses);
+            let result = await courseRepository.create(userId, sortCourses);
             return res.status(201).send({result, status:201});
         }
     }catch (e) {

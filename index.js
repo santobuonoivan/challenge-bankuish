@@ -27,9 +27,9 @@ app.use(express.urlencoded({extended:true}));
 app.use(cors());
 
 //Routes files
-
-
+const studyScheduleRoutes = require('./components/study_schedule/StudyScheduleRoutes');
 //Routes Urls
+app.use('/study_schedule', studyScheduleRoutes);
 
 
 //Test Conection

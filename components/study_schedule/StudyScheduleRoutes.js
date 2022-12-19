@@ -6,9 +6,9 @@ const authentication = require('../../middleware/Authentication');
 //const authorization = require('./../../middleware/Authorization');
 //const {hasCreateUser, hasUpdateUser, hasDeleteUser } = require('./validator/UserValidator');
 
-const courseController = require('./CourseController');
+const courseController = require('./StudyScheduleController');
 
-router.post('/study_schedule',[cors()/*, authentication,/* hasCreateUser*/ ], courseController.createStudySchedule);
+router.post('/',[cors()/*, authentication,/* hasCreateUser*/ ], courseController.createStudySchedule);
 
 router.get('/:study_schedule_id',[cors()/*,authentication*/], courseController.getStudySchedule);
 
