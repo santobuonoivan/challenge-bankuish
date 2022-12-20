@@ -26,7 +26,7 @@ app.use(express.urlencoded({extended:true}));
 /* config cors */
 app.use(cors());
 /* config firebase auth */
-const admin = require("./firebase/firebase-config");
+const admin = require("./src/firebase/firebase-config");
 
 //Routes files
 const studyScheduleRoutes = require('./components/study_schedule/StudyScheduleRoutes');
