@@ -1,23 +1,25 @@
 version: '3'
 services:
     course:
-        container_name: estancia_service
+        container_name: course_service
         restart: always
-        build: ./src
+        build: .
         ports: 
-            - "3002:3002"
+            - "5001:5001"
         env_file: 
             - .env
         links: 
             - pg
         volumes: 
-            - ./course:/usr/src/app   
+            - .:/usr/src/app   
     pg:
         container_name: pg
         image: "postgres" # use latest official postgres version
         ports:
             - 5432:5432
-        volumes:
-          - ./postgres-data:/var/lib/postgresql/data        
-        logging: 
-            driver: none
+        env_file: 
+            - .env
+        #volumes:
+        #  - ./postgres-data:/var/lib/postgresql/data        
+        #logging: 
+        #    driver: none

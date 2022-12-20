@@ -1,8 +1,8 @@
 {
-  "name": "apirest-template",
+  "name": "apirest",
   "version": "1.0.0",
-  "description": "a apirest template",
-  "main": "index.js",
+  "description": "a apirest",
+  "main": "src/index.js",
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "bcryptjs": "^2.4.3",
@@ -23,8 +23,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node src/index.js",
+    "dev": "node src/index.js"
   },
   "repository": {
     "type": "git",
