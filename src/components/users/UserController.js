@@ -8,10 +8,11 @@ exports.createUser = async function(req,res){
             email,
             password,
             emailVerified: false,
-            disabled: false
+            disabled: false,
+            returnSecureToken:true
         });
 
-        return res.status(201).send({ user: userResponse });
+        return res.status(201).send({ user: userResponse});
     }catch (e) {
         if(e instanceof require('./../../Exceptions/AppError'))
             return res.status(e.status).json({error:e.message});
