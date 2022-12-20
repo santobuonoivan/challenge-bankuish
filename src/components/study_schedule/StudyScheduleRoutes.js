@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const cors = require('cors');
 /* firebase auth middleware */
-const { decodeToken } = require('../../src/middleware/authentication');
+const { decodeToken } = require('../../middleware/authentication');
 
 const courseController = require('./StudyScheduleController');
 

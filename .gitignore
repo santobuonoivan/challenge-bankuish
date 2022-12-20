@@ -3,3 +3,4 @@ package-lock.json
 .idea/
 .env
 .env.example
+src/firebase/firebase.json
