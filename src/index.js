@@ -6,7 +6,7 @@ const morgan = require('morgan');
 /* CORS is a nodejs package for providing a Connect/Express middleware that can be used to enable CORS with various options. */
 const cors = require('cors');
 /* The dotenv is a zero-dependency module that loads environment variables from a .env file into process.env . */
-const env = require('dotenv').config();
+const env = require('dotenv').config("./../.env");
 
 //Settings
 /* setting port config */
@@ -26,7 +26,7 @@ app.use(express.urlencoded({extended:true}));
 /* config cors */
 app.use(cors());
 /* config firebase auth */
-const admin = require("./src/firebase/firebase-config");
+const admin = require("./firebase/firebase-config");
 
 //Routes files
 const studyScheduleRoutes = require('./components/study_schedule/StudyScheduleRoutes');

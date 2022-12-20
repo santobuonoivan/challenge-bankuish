@@ -11,7 +11,7 @@ services:
         links: 
             - pg
         volumes: 
-            - .:/usr/src/app   
+            - .:/usr/src/app
     pg:
         container_name: pg
         image: "postgres" # use latest official postgres version
