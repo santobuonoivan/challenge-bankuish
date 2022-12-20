@@ -25,11 +25,15 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 /* config cors */
 app.use(cors());
+/* config firebase auth */
+const admin = require("./firebase/firebase-config");
 
 //Routes files
 const studyScheduleRoutes = require('./components/study_schedule/StudyScheduleRoutes');
+const userRoutes = require('./components/users/UserRoutes');
 //Routes Urls
 app.use('/study_schedule', studyScheduleRoutes);
+app.use('/users', userRoutes);
 
 
 //Test Conection
