@@ -31,6 +31,8 @@ FIREBASE_PROJECT_ID="challenge-test-1a32b"
 
 ### GOOGLE_APPLICATION_CREDENTIALS examples:
 
+you need to generate the json key of the service account to start the server
+
 ```
 GOOGLE_APPLICATION_CREDENTIALS_LOCAL="/home/ivan/Desktop/challenge/src/firebase/firebase.json"
 GOOGLE_APPLICATION_CREDENTIALS_DOCKER="/usr/src/app/src/firebase/firebase.json"
