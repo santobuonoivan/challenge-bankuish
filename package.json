@@ -18,7 +18,9 @@
     "pg": "^8.8.0",
     "sequelize": "^6.3.4",
     "should": "^13.2.3",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
+    "swagger-jsdoc": "^6.2.7",
+    "swagger-ui-express": "^4.6.0"
   },
   "scripts": {
     "test": "mocha src/tests/**/*.spec.js -b",
