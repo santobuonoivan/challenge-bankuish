@@ -77,7 +77,3 @@ With `package.json` and dependencies
 ### Tests
 
 > run `npm run test`
-
-## Diagrama
-
-![Alt text](./diagrama/diagramaDeFlujoHugoChallenge.png?raw=true "Diagrama")
