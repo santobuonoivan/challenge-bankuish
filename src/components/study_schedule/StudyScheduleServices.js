@@ -23,3 +23,12 @@ exports.sortCourses = function (courses = []) {
     });
     return sort;
 };
+
+exports.buidSortResult = function ( orderedCourses = []) {
+    let result = [];
+    if ( orderedCourses.length ) {
+        const first = orderedCourses[0].requiredCourse;
+        result = [ first, ...orderedCourses.map( course => course.desiredCourse) ];
+    }
+    return result;
+}

@@ -261,7 +261,6 @@ exports.joiMsgError = (err) => {
 			err.message = `${err.context.label} contiene un valor invalido`;
 			break;
 		case "any.only":
-			console.log(err);
 			err.message = `${err.context.label} contiene un valor invalido [${err.context.value}]`;
 			break;
 		default:

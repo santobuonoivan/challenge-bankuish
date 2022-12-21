@@ -6,7 +6,6 @@ class Middleware {
 			if (token) {				
 				const decodeValue = await admin.auth().verifyIdToken(token);
 				if (decodeValue) {
-					console.log(decodeValue);
 					return next();
 				}
 			}

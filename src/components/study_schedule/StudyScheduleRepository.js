@@ -3,10 +3,9 @@
 const { studySchedule, studyScheduleConfig } = require('../../database/db.postgres.config');
 const AppErrorException = require('../../Exceptions/AppError');
 
-exports.create = async function (userId, courses) {
+exports.create = async function (userId, studyScheduleList) {
     try{
-        const first = courses[0].requiredCourse;
-        const studyScheduleList = [ first, ...courses.map( course => course.desiredCourse) ];
+        
         const studyScheduleResult = await studySchedule.create({ user_id: userId});
         for ( let i = 0; i < studyScheduleList.length; i++ ) {
             const course = studyScheduleList[i];

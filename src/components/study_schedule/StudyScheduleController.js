@@ -5,8 +5,9 @@ exports.createStudySchedule = async function(req,res,next){
     const {courses,userId} = req.body;
     try {
         let sortCourses = courseService.sortCourses(courses);
-        if(sortCourses.length > 0){
-            let result = await courseRepository.create(userId, sortCourses);
+        let sortCourseList = courseService.buidSortResult(sortCourses);
+        if(sortCourseList.length > 0){
+            let result = await courseRepository.create(userId, sortCourseList);
             return res.status(201).send({result, status:201});
         }
     }catch (e) {

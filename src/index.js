@@ -37,7 +37,7 @@ app.use('/users', userRoutes);
 
 
 //Test Conection
-app.get('/', function (req, res) { res.send('Hello Apirest Template')});
+app.get('/', function (req, res) { res.send({message: 'Hello Apirest'})});
 
 //Server
 try{
